@@ -1,0 +1,1464 @@
+<Jan 11, 2018 6:39:54,159 AM CST> <Notice> <WebLogicServer> <BEA-000378> <The server failed to shut down within the configured timeout of 30 seconds. The server process will now exit.> 
+<Jan 11, 2018 6:39:54,307 AM CST> <Error> <> <BEA-000000> <THREAD DUMP from JVM taken at 'Thu Jan 11 06:39:54 2018'
+
+
+2018-01-11 06:39:54
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.151-b12 mixed mode):
+
+"Thread-71" #190 daemon prio=5 os_prio=0 tid=0x00007fb1744ac000 nid=0xe40 waiting on condition [0x00007fb138325000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at weblogic.t3.srvr.ServerLifeCycleTimerThread$1.run(ServerLifeCycleTimerThread.java:156)
+
+"SIGINT handler" #189 daemon prio=9 os_prio=0 tid=0x00007fb161686800 nid=0xe3e waiting for monitor entry [0x00007fb138426000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - waiting to lock <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SIGINT handler" #188 daemon prio=9 os_prio=0 tid=0x00007fb161686000 nid=0xe3d waiting for monitor entry [0x00007fb138628000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - waiting to lock <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SIGINT handler" #187 daemon prio=9 os_prio=0 tid=0x00007fb161681800 nid=0xe3c waiting for monitor entry [0x00007fb133ff1000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - waiting to lock <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SIGINT handler" #186 daemon prio=9 os_prio=0 tid=0x00007fb161681000 nid=0xe3b waiting for monitor entry [0x00007fb14c2d1000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - waiting to lock <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SIGINT handler" #185 daemon prio=9 os_prio=0 tid=0x00007fb161087000 nid=0xe3a waiting for monitor entry [0x00007fb138527000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - waiting to lock <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-70" #184 daemon prio=5 os_prio=0 tid=0x00007fb15066b000 nid=0xe39 waiting on condition [0x00007fb14d9f8000]
+   java.lang.Thread.State: RUNNABLE
+        at weblogic.platform.SunVM.fileThreadDump0(Native Method)
+        - locked <0x00000000ab037008> (a weblogic.platform.SunVM)
+        at weblogic.platform.SunVM.threadDump(SunVM.java:109)
+        at weblogic.platform.SunVM.threadDump(SunVM.java:142)
+        at weblogic.t3.srvr.SrvrUtilities.logThreadDump(SrvrUtilities.java:46)
+        at weblogic.t3.srvr.ServerLifeCycleTimerThread.run(ServerLifeCycleTimerThread.java:171)
+
+"Thread-3" #11 prio=5 os_prio=0 tid=0x00007fb18f544000 nid=0xe33 in Object.wait() [0x00007fb138729000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownAllTheWay.run(CurrentTaskFuture.java:972)
+        - locked <0x000000008c48fac0> (a java.util.LinkedList)
+        at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:164)
+        at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:152)
+        at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.proceedTo(AsyncRunLevelContext.java:535)
+        at org.glassfish.hk2.runlevel.internal.RunLevelControllerImpl.proceedTo(RunLevelControllerImpl.java:72)
+        at weblogic.t3.srvr.T3Srvr.shutdown(T3Srvr.java:1324)
+        at weblogic.t3.srvr.T3Srvr.shutdown(T3Srvr.java:1271)
+        at weblogic.t3.srvr.T3Srvr.forceShutdown(T3Srvr.java:1160)
+        at weblogic.t3.srvr.T3Srvr$3.run(T3Srvr.java:1179)
+
+"SIGINT handler" #183 daemon prio=9 os_prio=0 tid=0x00007fb161683800 nid=0xe31 in Object.wait() [0x00007fb13882a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Thread.join(Thread.java:1252)
+        - locked <0x00000000aad3ef40> (a weblogic.t3.srvr.T3Srvr$3)
+        at java.lang.Thread.join(Thread.java:1326)
+        at java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:106)
+        at java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.lang.Shutdown.runHooks(Shutdown.java:123)
+        at java.lang.Shutdown.sequence(Shutdown.java:167)
+        at java.lang.Shutdown.exit(Shutdown.java:212)
+        - locked <0x00000000ab167988> (a java.lang.Class for java.lang.Shutdown)
+        at java.lang.Terminator$1.handle(Terminator.java:52)
+        at sun.misc.Signal$1.run(Signal.java:212)
+        at java.lang.Thread.run(Thread.java:748)
+
+"pool-65-thread-4" #177 prio=5 os_prio=0 tid=0x00007fb16c0ff800 nid=0xdd4 waiting on condition [0x00007fb138b2b000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x000000009114f520> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"pool-65-thread-3" #176 prio=5 os_prio=0 tid=0x00007fb16c0fe000 nid=0xdd3 waiting on condition [0x00007fb138c2c000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x000000009114f520> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"pool-65-thread-2" #175 prio=5 os_prio=0 tid=0x00007fb16c227000 nid=0xdd2 waiting on condition [0x00007fb138d2d000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x000000009114f520> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"pool-65-thread-1" #174 prio=5 os_prio=0 tid=0x00007fb16c24e000 nid=0xdd1 waiting on condition [0x00007fb138e2e000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x000000009114f520> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-65" #172 daemon prio=9 os_prio=0 tid=0x00007fb152106800 nid=0xdd0 runnable [0x00007fb14b0c3000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.fs.LinuxWatchService.poll(Native Method)
+        at sun.nio.fs.LinuxWatchService.access$600(LinuxWatchService.java:47)
+        at sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+        at java.lang.Thread.run(Thread.java:748)
+
+"LDAPConnThread-6 ldaps://127.0.0.1:7001" #171 daemon prio=9 os_prio=0 tid=0x00007fb151904000 nid=0xdcc runnable [0x00007fb1541ec000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000c01cf108> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SubtreeCleaner" #170 daemon prio=5 os_prio=0 tid=0x00007fb151820800 nid=0xdcb waiting on condition [0x00007fb13974e000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at oracle.security.jps.internal.policystore.rdbms.SubtreeCleaner$SubtreeCleanerTask.run(SubtreeCleaner.java:133)
+        at java.lang.Thread.run(Thread.java:748)
+
+"resultcache:ServiceMonitor" #165 daemon prio=5 os_prio=0 tid=0x0000000005382000 nid=0xdc8 waiting on condition [0x00007fb1340f2000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at java.lang.Thread.sleep(Thread.java:340)
+        at com.oracle.common.base.Blocking.sleep(Blocking.java:126)
+        at com.oracle.common.base.Blocking.sleep(Blocking.java:111)
+        at com.tangosol.net.SimpleServiceMonitor.monitorServices(SimpleServiceMonitor.java:192)
+        at com.tangosol.net.SimpleServiceMonitor$1.run(SimpleServiceMonitor.java:166)
+        at java.lang.Thread.run(Thread.java:748)
+
+"resultcache:ORA-OSB-deploymentsWorker:0x0000:267" #164 daemon prio=5 os_prio=0 tid=0x00007fb18f562800 nid=0xdc7 in Object.wait() [0x00007fb1341f3000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:97)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:80)
+        at com.tangosol.coherence.component.util.Queue.await(Queue.CDB:9)
+        - locked <0x00000000bd187e78> (a com.tangosol.coherence.component.util.queue.concurrentQueue.dualQueue.AssociationQueue)
+        at com.tangosol.coherence.component.util.queue.ConcurrentQueue.await(ConcurrentQueue.CDB:12)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.DaemonPool$Daemon.onWait(DaemonPool.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.Grid$DaemonPool$Daemon.onWait(Grid.CDB:3)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"DistributedCache:resultcache:ORA-OSB-deployments:EventDispatcher" #163 daemon prio=10 os_prio=0 tid=0x00007fb18d451000 nid=0xdc6 in Object.wait() [0x00007fb1342f4000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:97)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:80)
+        at com.tangosol.coherence.component.util.Queue.await(Queue.CDB:9)
+        - locked <0x00000000bd1880e0> (a com.tangosol.coherence.component.util.daemon.queueProcessor.Service$EventDispatcher$Queue)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.Service$EventDispatcher.onWait(Service.CDB:7)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"DistributedCache:resultcache:ORA-OSB-deployments" #162 daemon prio=10 os_prio=0 tid=0x00000000053fd800 nid=0xdc5 waiting on condition [0x00007fb1343f5000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000bd188320> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:157)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:58)
+        at com.tangosol.coherence.component.util.queue.SingleConsumerQueue.await(SingleConsumerQueue.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.Grid.onWait(Grid.CDB:6)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-61" #161 daemon prio=5 os_prio=0 tid=0x00000000052fe800 nid=0xdc4 waiting on condition [0x00007fb13dd0e000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000bd188720> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at com.bea.alsb.alert.sla.TaskCollector.run(TaskCollector.java:57)
+        at java.lang.Thread.run(Thread.java:748)
+
+"OAM REST Config Reload" #158 daemon prio=5 os_prio=0 tid=0x0000000004538800 nid=0xdae in Object.wait() [0x00007fb13de0f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at oracle.security.idm.common.rest.IdmServletContainer$ServletReloader.run(IdmServletContainer.java:269)
+        - locked <0x00000000ba734738> (a oracle.security.idm.common.rest.IdmServletContainer$ServletReloader)
+
+"Configuration Store Observer" #159 daemon prio=5 os_prio=0 tid=0x000000000451f800 nid=0xdad in Object.wait() [0x00007fb13df10000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.util.TimerThread.mainLoop(Timer.java:552)
+        - locked <0x00000000ba734a38> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"WsMgmtWorkScheduler" #157 daemon prio=5 os_prio=0 tid=0x000000000442c000 nid=0xdac waiting on condition [0x00007fb13e211000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at oracle.j2ee.ws.common.mgmt.util.WorkSchedulerImpl$1.run(WorkSchedulerImpl.java:37)
+
+"LDAPConnThread-5 ldaps://127.0.0.1:7001" #155 daemon prio=5 os_prio=0 tid=0x00000000033ba000 nid=0xdab runnable [0x00007fb13ef12000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b9b1fdc0> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"NonBlockingTimer" #153 daemon prio=5 os_prio=0 tid=0x00007fb158175000 nid=0xda9 in Object.wait() [0x00007fb14abbe000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:97)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:80)
+        at com.oracle.common.internal.util.TimerThread.mainLoop(Timer.java:485)
+        - locked <0x00000000b9b1fff0> (a com.oracle.common.internal.util.TaskQueue)
+        at com.oracle.common.internal.util.TimerThread.run(Timer.java:438)
+
+"LDAPConnThread-4 ldaps://127.0.0.1:7001" #151 daemon prio=5 os_prio=0 tid=0x00007fb1583c8000 nid=0xda8 runnable [0x00007fb179216000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b8dfa240> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"LDAPConnThread-3 ldaps://127.0.0.1:7001" #150 daemon prio=5 os_prio=0 tid=0x00007fb16c4a4800 nid=0xda7 runnable [0x00007fb140a8a000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b70d0018> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"LDAPConnThread-2 ldaps://127.0.0.1:7001" #149 daemon prio=5 os_prio=0 tid=0x0000000003634800 nid=0xda6 runnable [0x00007fb140fdd000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b621ae80> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"com.bea.osb.transports.jms.TimerThread" #148 daemon prio=5 os_prio=0 tid=0x00000000036cc800 nid=0xda5 waiting on condition [0x00007fb1412e7000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b621b098> (a java.util.concurrent.Semaphore$NonfairSync)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:997)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+        at java.util.concurrent.Semaphore.acquire(Semaphore.java:312)
+        at com.bea.wli.sb.transports.jms.JmsAsyncMessageTable$TimeoutThread.run(JmsAsyncMessageTable.java:258)
+
+"Timer-5" #147 daemon prio=5 os_prio=0 tid=0x000000000333f000 nid=0xda4 in Object.wait() [0x00007fb141fe8000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000b621b2a8> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"pool-14-thread-1" #146 prio=5 os_prio=0 tid=0x000000000312a800 nid=0xda3 waiting on condition [0x00007fb1424ee000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b621b438> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-55" #145 daemon prio=5 os_prio=0 tid=0x00000000030ce000 nid=0xda2 in Object.wait() [0x00007fb1425ef000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+        - locked <0x00000000b621b698> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+        at com.bea.wli.config.derivedcache.impl.GarbageCollectionNotifier.run(GarbageCollectionNotifier.java:165)
+        at java.lang.Thread.run(Thread.java:748)
+
+"LDAPConnThread-1 ldaps://127.0.0.1:7001" #144 daemon prio=5 os_prio=0 tid=0x00007fb1500b8800 nid=0xda1 runnable [0x00007fb143874000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b52081f8> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"[STANDBY] ExecuteThread: '48' for queue: 'weblogic.kernel.Default (self-tuning)'" #143 daemon prio=9 os_prio=0 tid=0x00007fb18f3e3000 nid=0xd9f in Object.wait() [0x00007fb14446a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcaff0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '47' for queue: 'weblogic.kernel.Default (self-tuning)'" #142 daemon prio=9 os_prio=0 tid=0x00007fb1702ff800 nid=0xd9e runnable [0x00007fb1445ae000]
+   java.lang.Thread.State: RUNNABLE
+        at java.security.AccessController.doPrivileged(Native Method)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServerInterceptorBase.getMBeanInfo(WLSMBeanServerInterceptorBase.java:797)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServerInterceptorBase$30.run(WLSMBeanServerInterceptorBase.java:799)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServerInterceptorBase.getMBeanInfo(WLSMBeanServerInterceptorBase.java:797)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServerInterceptorBase$30.run(WLSMBeanServerInterceptorBase.java:799)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServerInterceptorBase.getMBeanInfo(WLSMBeanServerInterceptorBase.java:797)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor.getMBeanInfoForCache(PartitionJMXInterceptor.java:1399)
+        - locked <0x00000000b1e04208> (a weblogic.management.mbeanservers.internal.PartitionJMXInterceptor)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor.access$1500(PartitionJMXInterceptor.java:96)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor$MBeanInfoMapComputable.compute(PartitionJMXInterceptor.java:1774)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor$MBeanInfoMapComputable.compute(PartitionJMXInterceptor.java:1764)
+        at org.glassfish.hk2.utilities.cache.internal.WeakCARCacheImpl.compute(WeakCARCacheImpl.java:116)
+        - locked <0x00000000b21ed618> (a org.glassfish.hk2.utilities.cache.internal.WeakCARCacheImpl)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor$IntermediateNotificationListener.handleMBeanNotification(PartitionJMXInterceptor.java:1507)
+        at weblogic.management.mbeanservers.internal.PartitionJMXInterceptor$IntermediateNotificationListener.handleNotification(PartitionJMXInterceptor.java:1688)
+        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor$ListenerWrapper.handleNotification(DefaultMBeanServerInterceptor.java:1754)
+        at javax.management.NotificationBroadcasterSupport.handleNotification(NotificationBroadcasterSupport.java:275)
+        at javax.management.NotificationBroadcasterSupport$SendNotifJob.run(NotificationBroadcasterSupport.java:352)
+        at javax.management.NotificationBroadcasterSupport$1.execute(NotificationBroadcasterSupport.java:337)
+        at javax.management.NotificationBroadcasterSupport.sendNotification(NotificationBroadcasterSupport.java:248)
+        at javax.management.MBeanServerDelegate.sendNotification(MBeanServerDelegate.java:209)
+        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.sendNotification(DefaultMBeanServerInterceptor.java:1498)
+        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.unregisterFromRepository(DefaultMBeanServerInterceptor.java:1952)
+        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.exclusiveUnregisterMBean(DefaultMBeanServerInterceptor.java:448)
+        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.unregisterMBean(DefaultMBeanServerInterceptor.java:415)
+        at com.sun.jmx.mbeanserver.JmxMBeanServer.unregisterMBean(JmxMBeanServer.java:546)
+        at weblogic.management.jmx.mbeanserver.WLSMBeanServer.internalUnregisterMBean(WLSMBeanServer.java:223)
+        at weblogic.management.mbeanservers.internal.RuntimeMBeanAgent$1.unregisteredInternal(RuntimeMBeanAgent.java:132)
+        at weblogic.management.mbeanservers.internal.RuntimeMBeanAgent$1.unregistered(RuntimeMBeanAgent.java:108)
+        at weblogic.management.provider.core.RegistrationManagerBase.invokeRegistrationHandlers(RegistrationManagerBase.java:252)
+        at weblogic.management.provider.core.RegistrationManagerBase.unregisterBeanRelationship(RegistrationManagerBase.java:150)
+        at weblogic.management.runtime.RuntimeMBeanDelegate.unregister(RuntimeMBeanDelegate.java:313)
+        at weblogic.wsee.monitoring.WseeRuntimeMBeanDelegate.unregister(WseeRuntimeMBeanDelegate.java:145)
+        at weblogic.management.runtime.RuntimeMBeanDelegate.unregisterChildren(RuntimeMBeanDelegate.java:391)
+        at weblogic.management.runtime.RuntimeMBeanDelegate.unregister(RuntimeMBeanDelegate.java:300)
+        at weblogic.wsee.monitoring.WseeRuntimeMBeanDelegate.unregister(WseeRuntimeMBeanDelegate.java:145)
+        at weblogic.wsee.monitoring.WseeBasePortRuntimeMBeanImpl.unregister(WseeBasePortRuntimeMBeanImpl.java:272)
+        at weblogic.management.runtime.RuntimeMBeanDelegate.unregisterChildren(RuntimeMBeanDelegate.java:391)
+        at weblogic.management.runtime.RuntimeMBeanDelegate.unregister(RuntimeMBeanDelegate.java:300)
+        at weblogic.wsee.monitoring.WseeRuntimeMBeanDelegate.unregister(WseeRuntimeMBeanDelegate.java:145)
+        at weblogic.wsee.monitoring.WseeBaseRuntimeMBeanImpl.unregister(WseeBaseRuntimeMBeanImpl.java:266)
+        at weblogic.wsee.monitoring.WseeV2RuntimeMBeanImpl.unregister(WseeV2RuntimeMBeanImpl.java:61)
+        at weblogic.wsee.ws.WsRegistry$1.run(WsRegistry.java:338)
+        at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:326)
+        at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:137)
+        at weblogic.wsee.ws.WsRegistry.unregisterMBean(WsRegistry.java:334)
+        at weblogic.wsee.ws.WsRegistry.unregister(WsRegistry.java:273)
+        at weblogic.wsee.WlsJaxrpcServiceProviderImpl.rpcServiceUnregister(WlsJaxrpcServiceProviderImpl.java:131)
+        at weblogic.wsee.deploy.DeployInfo.clean(DeployInfo.java:409)
+        at weblogic.wsee.deploy.WSEEModule.destroy(WSEEModule.java:536)
+        at weblogic.wsee.deploy.WSEEWebModule.destroy(WSEEWebModule.java:390)
+        at weblogic.wsee.deploy.AppDeploymentExtensionFactory.unprepare(AppDeploymentExtensionFactory.java:174)
+        at weblogic.wsee.deploy.AppDeploymentExtensionFactory.removeModule(AppDeploymentExtensionFactory.java:71)
+        - locked <0x00000000b364a9f0> (a java.util.Collections$SynchronizedMap)
+        at weblogic.wsee.deploy.ServletDeployListener.contextDestroyed(ServletDeployListener.java:45)
+        at weblogic.servlet.internal.EventsManager$FireContextListenerAction.run(EventsManager.java:706)
+        at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:326)
+        at weblogic.security.service.SecurityManager.runAsForUserCode(SecurityManager.java:197)
+        at weblogic.servlet.provider.WlsSecurityProvider.runAsForUserCode(WlsSecurityProvider.java:203)
+        at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:71)
+        at weblogic.servlet.internal.EventsManager.executeContextListener(EventsManager.java:251)
+        at weblogic.servlet.internal.EventsManager.notifyContextDestroyedEvent(EventsManager.java:240)
+        at weblogic.servlet.internal.EventsManager.notifyContextDestroyedEvent(EventsManager.java:212)
+        at weblogic.servlet.internal.WebAppServletContext.destroy(WebAppServletContext.java:3170)
+        - locked <0x00000000b78e82b8> (a weblogic.servlet.internal.WebAppServletContext)
+        at weblogic.servlet.internal.ServletContextManager.destroyContext(ServletContextManager.java:251)
+        at weblogic.servlet.internal.HttpServer.unloadWebApp(HttpServer.java:693)
+        - locked <0x00000000b22a21a8> (a weblogic.servlet.internal.HttpServer)
+        at weblogic.servlet.internal.WebAppModule.destroyContexts(WebAppModule.java:1873)
+        at weblogic.servlet.internal.WebAppModule.deactivate(WebAppModule.java:911)
+        at weblogic.application.internal.ExtensibleModuleWrapper$ActivateStateChange.previous(ExtensibleModuleWrapper.java:328)
+        at weblogic.application.internal.ExtensibleModuleWrapper$ActivateStateChange.previous(ExtensibleModuleWrapper.java:313)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:207)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:193)
+        at weblogic.application.internal.ExtensibleModuleWrapper.deactivate(ExtensibleModuleWrapper.java:163)
+        at weblogic.application.internal.flow.ModuleListenerInvoker.deactivate(ModuleListenerInvoker.java:131)
+        at weblogic.application.internal.flow.ModuleStateDriver$2.previous(ModuleStateDriver.java:216)
+        at weblogic.application.internal.flow.ModuleStateDriver$2.previous(ModuleStateDriver.java:207)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:207)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:193)
+        at weblogic.application.internal.flow.ModuleStateDriver.deactivate(ModuleStateDriver.java:101)
+        at weblogic.application.internal.flow.DeploymentCallbackFlow.deactivate(DeploymentCallbackFlow.java:120)
+        at weblogic.application.internal.BaseDeployment$2.previous(BaseDeployment.java:758)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:207)
+        at weblogic.application.utils.StateMachineDriver.previousState(StateMachineDriver.java:193)
+        at weblogic.application.internal.BaseDeployment.deactivate(BaseDeployment.java:285)
+        at weblogic.application.internal.SingleModuleDeployment.deactivate(SingleModuleDeployment.java:52)
+        at weblogic.application.internal.DeploymentStateChecker.deactivate(DeploymentStateChecker.java:202)
+        at weblogic.deploy.internal.targetserver.AppContainerInvoker.deactivate(AppContainerInvoker.java:114)
+        at weblogic.deploy.internal.targetserver.BasicDeployment.deactivate(BasicDeployment.java:357)
+        at weblogic.deploy.internal.targetserver.BasicDeployment.deactivateFromServerLifecycle(BasicDeployment.java:624)
+        at weblogic.management.deploy.internal.DeploymentAdapter$1.doDeactivate(DeploymentAdapter.java:75)
+        at weblogic.management.deploy.internal.DeploymentAdapter.deactivate(DeploymentAdapter.java:217)
+        at weblogic.management.deploy.internal.AppTransition$6.transitionApp(AppTransition.java:97)
+        at weblogic.management.deploy.internal.ConfiguredDeployments.transitionApps(ConfiguredDeployments.java:794)
+        at weblogic.management.deploy.internal.ConfiguredDeployments.deactivate(ConfiguredDeployments.java:469)
+        at weblogic.management.deploy.internal.ConfiguredDeployments.undeploy(ConfiguredDeployments.java:453)
+        at weblogic.management.deploy.internal.DeploymentShutdownService.doShutdown(DeploymentShutdownService.java:103)
+        at weblogic.management.deploy.internal.DeploymentShutdownService.halt(DeploymentShutdownService.java:118)
+        at weblogic.server.AbstractServerService.preDestroy(AbstractServerService.java:117)
+        at sun.reflect.GeneratedMethodAccessor885.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.glassfish.hk2.utilities.reflection.ReflectionHelper.invoke(ReflectionHelper.java:1287)
+        at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:346)
+        at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+        at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+        at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+        at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:101)
+        at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+        at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+        at weblogic.work.SelfTuningWorkManagerImpl$WorkAdapterImpl.run(SelfTuningWorkManagerImpl.java:670)
+        at weblogic.invocation.ComponentInvocationContextManager._runAs(ComponentInvocationContextManager.java:352)
+        at weblogic.invocation.ComponentInvocationContextManager.runAs(ComponentInvocationContextManager.java:337)
+        at weblogic.work.LivePartitionUtility.doRunWorkUnderContext(LivePartitionUtility.java:57)
+        at weblogic.work.PartitionUtility.runWorkUnderContext(PartitionUtility.java:41)
+        at weblogic.work.SelfTuningWorkManagerImpl.runWorkUnderContext(SelfTuningWorkManagerImpl.java:644)
+        at weblogic.work.ExecuteThread.execute(ExecuteThread.java:415)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:355)
+
+"[STANDBY] ExecuteThread: '46' for queue: 'weblogic.kernel.Default (self-tuning)'" #141 daemon prio=9 os_prio=0 tid=0x00007fb1702fe800 nid=0xd9d in Object.wait() [0x00007fb1446b4000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcb460> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '45' for queue: 'weblogic.kernel.Default (self-tuning)'" #140 daemon prio=5 os_prio=0 tid=0x00007fb16c04e000 nid=0xd9c in Object.wait() [0x00007fb1447c1000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcb698> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '44' for queue: 'weblogic.kernel.Default (self-tuning)'" #139 daemon prio=9 os_prio=0 tid=0x00007fb16c04b000 nid=0xd9b in Object.wait() [0x00007fb1448c2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcb888> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '43' for queue: 'weblogic.kernel.Default (self-tuning)'" #138 daemon prio=9 os_prio=0 tid=0x00000000020e6800 nid=0xd9a in Object.wait() [0x00007fb1449dc000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcbac0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '42' for queue: 'weblogic.kernel.Default (self-tuning)'" #137 daemon prio=5 os_prio=0 tid=0x00000000020e4800 nid=0xd99 in Object.wait() [0x00007fb144add000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcbcf8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '41' for queue: 'weblogic.kernel.Default (self-tuning)'" #136 daemon prio=5 os_prio=0 tid=0x0000000001bda800 nid=0xd98 in Object.wait() [0x00007fb144bde000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcbfd8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '40' for queue: 'weblogic.kernel.Default (self-tuning)'" #135 daemon prio=9 os_prio=0 tid=0x0000000001bd8000 nid=0xd97 in Object.wait() [0x00007fb144cdf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcc3b8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '39' for queue: 'weblogic.kernel.Default (self-tuning)'" #134 daemon prio=9 os_prio=0 tid=0x0000000001bd6000 nid=0xd96 in Object.wait() [0x00007fb144de0000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcc5a8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '38' for queue: 'weblogic.kernel.Default (self-tuning)'" #133 daemon prio=5 os_prio=0 tid=0x0000000001bd4800 nid=0xd95 in Object.wait() [0x00007fb144ee1000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcc878> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '37' for queue: 'weblogic.kernel.Default (self-tuning)'" #132 daemon prio=9 os_prio=0 tid=0x0000000001c44000 nid=0xd94 in Object.wait() [0x00007fb144fe2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fccab0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '36' for queue: 'weblogic.kernel.Default (self-tuning)'" #131 daemon prio=5 os_prio=0 tid=0x0000000001c42000 nid=0xd93 in Object.wait() [0x00007fb1450e3000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fccd20> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '35' for queue: 'weblogic.kernel.Default (self-tuning)'" #130 daemon prio=9 os_prio=0 tid=0x0000000001c40000 nid=0xd92 in Object.wait() [0x00007fb1451e4000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fccf90> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '34' for queue: 'weblogic.kernel.Default (self-tuning)'" #129 daemon prio=9 os_prio=0 tid=0x0000000001c3e000 nid=0xd91 in Object.wait() [0x00007fb1452e5000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcd180> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '33' for queue: 'weblogic.kernel.Default (self-tuning)'" #128 daemon prio=5 os_prio=0 tid=0x0000000001e08000 nid=0xd90 in Object.wait() [0x00007fb1453e6000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcd448> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '32' for queue: 'weblogic.kernel.Default (self-tuning)'" #127 daemon prio=9 os_prio=0 tid=0x0000000001e06000 nid=0xd8f in Object.wait() [0x00007fb1454e7000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcd7e0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'" #126 daemon prio=9 os_prio=0 tid=0x0000000001e04000 nid=0xd8e in Object.wait() [0x00007fb1455e8000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcd9d0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '30' for queue: 'weblogic.kernel.Default (self-tuning)'" #125 daemon prio=9 os_prio=0 tid=0x0000000001e02000 nid=0xd8d in Object.wait() [0x00007fb1456e9000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcdbc0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '29' for queue: 'weblogic.kernel.Default (self-tuning)'" #124 daemon prio=9 os_prio=0 tid=0x000000000157a000 nid=0xd8c in Object.wait() [0x00007fb1457ea000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcddb0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '28' for queue: 'weblogic.kernel.Default (self-tuning)'" #123 daemon prio=9 os_prio=0 tid=0x0000000001578000 nid=0xd8b in Object.wait() [0x00007fb1458eb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fcdfa0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '27' for queue: 'weblogic.kernel.Default (self-tuning)'" #122 daemon prio=9 os_prio=0 tid=0x0000000001576000 nid=0xd8a in Object.wait() [0x00007fb1459ec000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd01a0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '26' for queue: 'weblogic.kernel.Default (self-tuning)'" #121 daemon prio=9 os_prio=0 tid=0x0000000001574800 nid=0xd89 in Object.wait() [0x00007fb145aed000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd05a8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '25' for queue: 'weblogic.kernel.Default (self-tuning)'" #120 daemon prio=9 os_prio=0 tid=0x0000000001573000 nid=0xd88 in Object.wait() [0x00007fb145bee000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd0798> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'" #119 daemon prio=9 os_prio=0 tid=0x00007fb15c74b800 nid=0xd87 in Object.wait() [0x00007fb145d59000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd0a68> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '23' for queue: 'weblogic.kernel.Default (self-tuning)'" #118 daemon prio=5 os_prio=0 tid=0x00007fb15c7b6000 nid=0xd86 in Object.wait() [0x00007fb145e5a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd0c58> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'" #117 daemon prio=9 os_prio=0 tid=0x0000000002136800 nid=0xd85 in Object.wait() [0x00007fb145f5b000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b4fd0e48> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '21' for queue: 'weblogic.kernel.Default (self-tuning)'" #116 daemon prio=9 os_prio=0 tid=0x0000000002157800 nid=0xd84 in Object.wait() [0x00007fb146157000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b03a0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'" #115 daemon prio=5 os_prio=0 tid=0x0000000002156000 nid=0xd83 in Object.wait() [0x00007fb146258000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0590> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '19' for queue: 'weblogic.kernel.Default (self-tuning)'" #114 daemon prio=9 os_prio=0 tid=0x000000000213c800 nid=0xd82 in Object.wait() [0x00007fb146359000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0780> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '18' for queue: 'weblogic.kernel.Default (self-tuning)'" #113 daemon prio=9 os_prio=0 tid=0x000000000213a800 nid=0xd81 in Object.wait() [0x00007fb14645a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0970> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '17' for queue: 'weblogic.kernel.Default (self-tuning)'" #112 daemon prio=9 os_prio=0 tid=0x0000000002139000 nid=0xd80 in Object.wait() [0x00007fb14655b000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0b60> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'" #111 daemon prio=9 os_prio=0 tid=0x0000000002138000 nid=0xd7f in Object.wait() [0x00007fb14665c000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0d50> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '15' for queue: 'weblogic.kernel.Default (self-tuning)'" #110 daemon prio=9 os_prio=0 tid=0x0000000001cb2000 nid=0xd7e in Object.wait() [0x00007fb14675d000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b0f40> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'" #109 daemon prio=9 os_prio=0 tid=0x0000000001cb3800 nid=0xd7d in Object.wait() [0x00007fb14685e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b1130> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '13' for queue: 'weblogic.kernel.Default (self-tuning)'" #108 daemon prio=5 os_prio=0 tid=0x0000000002143000 nid=0xd7c in Object.wait() [0x00007fb146b5f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b49b1320> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"Thread-54" #107 prio=5 os_prio=0 tid=0x0000000001f39800 nid=0xd7b waiting on condition [0x00007fb147e7c000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b49b1688> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+        at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:841)
+        at weblogic.store.internal.PersistentStoreImpl.synchronousFlush(PersistentStoreImpl.java:1241)
+        at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:1233)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-53" #106 prio=5 os_prio=0 tid=0x0000000001f34800 nid=0xd7a waiting on condition [0x00007fb147f7d000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b49b1918> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+        at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:841)
+        at weblogic.store.internal.PersistentStoreImpl.synchronousFlush(PersistentStoreImpl.java:1241)
+        at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:1233)
+        at java.lang.Thread.run(Thread.java:748)
+
+"GENERIC" #105 daemon prio=5 os_prio=0 tid=0x00000000020de000 nid=0xd79 in Object.wait() [0x00007fb14807e000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000b49b1bb0> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"[STANDBY] ExecuteThread: '12' for queue: 'weblogic.kernel.Default (self-tuning)'" #104 daemon prio=9 os_prio=0 tid=0x0000000001f4b000 nid=0xd78 in Object.wait() [0x00007fb14877f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193180> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'" #103 daemon prio=9 os_prio=0 tid=0x0000000001f49000 nid=0xd77 in Object.wait() [0x00007fb148880000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193370> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'" #102 daemon prio=9 os_prio=0 tid=0x0000000001f47800 nid=0xd76 in Object.wait() [0x00007fb148981000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193560> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" #101 daemon prio=9 os_prio=0 tid=0x0000000001f45800 nid=0xd75 in Object.wait() [0x00007fb148a82000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193750> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" #100 daemon prio=5 os_prio=0 tid=0x0000000001f44000 nid=0xd74 in Object.wait() [0x00007fb148b83000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193940> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" #99 daemon prio=9 os_prio=0 tid=0x0000000001f43800 nid=0xd73 in Object.wait() [0x00007fb148c84000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b3193b30> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"weblogic.GCMonitor" #98 daemon prio=5 os_prio=0 tid=0x00007fb16c01f800 nid=0xd72 in Object.wait() [0x00007fb149abb000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+        - locked <0x00000000b3193f50> (a java.lang.ref.ReferenceQueue$Lock)
+        at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:86)
+        at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:62)
+
+"LDAPConnThread-0 ldaps://127.0.0.1:7001" #97 daemon prio=5 os_prio=0 tid=0x00007fb170685000 nid=0xd71 runnable [0x00007fb149dbc000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+        at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+        - locked <0x00000000b3196158> (a java.io.BufferedInputStream)
+        at netscape.ldap.ber.stream.BERElement.getElement(Unknown Source)
+        at netscape.ldap.LDAPConnThread.run(Unknown Source)
+        at java.lang.Thread.run(Thread.java:748)
+
+"JMX Framework document pooling thread" #96 daemon prio=5 os_prio=0 tid=0x00007fb161382800 nid=0xd69 in Object.wait() [0x00007fb14a6bd000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.as.config.notification.filesystem.DocumentChangeNotifierImpl.waitForTaskOrNextCheckTime(DocumentChangeNotifierImpl.java:169)
+        - locked <0x00000000b183a6d0> (a java.util.concurrent.ConcurrentLinkedQueue)
+        at oracle.as.config.notification.filesystem.DocumentChangeNotifierImpl.runOnce(DocumentChangeNotifierImpl.java:129)
+        at oracle.as.config.notification.filesystem.DocumentChangeNotifierImpl.run(DocumentChangeNotifierImpl.java:121)
+        at java.lang.Thread.run(Thread.java:748)
+
+"pool-2-thread-1" #95 prio=5 os_prio=0 tid=0x00007fb161237000 nid=0xd68 waiting on condition [0x00007fb14b3c4000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b16de540> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Invocation:Management:EventDispatcher" #94 daemon prio=10 os_prio=0 tid=0x00007fb158047800 nid=0xd67 in Object.wait() [0x00007fb14b4c5000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:97)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:80)
+        at com.tangosol.coherence.component.util.Queue.await(Queue.CDB:9)
+        - locked <0x00000000b1c0fae0> (a com.tangosol.coherence.component.util.daemon.queueProcessor.Service$EventDispatcher$Queue)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.Service$EventDispatcher.onWait(Service.CDB:7)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Invocation:Management" #93 daemon prio=10 os_prio=0 tid=0x00007fb158046800 nid=0xd66 waiting on condition [0x00007fb14b9ca000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c0fd20> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:157)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:58)
+        at com.tangosol.coherence.component.util.queue.SingleConsumerQueue.await(SingleConsumerQueue.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.Grid.onWait(Grid.CDB:6)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Transport:TransportService" #89 daemon prio=10 os_prio=0 tid=0x00007fb158017800 nid=0xd61 waiting on condition [0x00007fb14acbf000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c10210> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:157)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:58)
+        at com.tangosol.coherence.component.util.queue.SingleConsumerQueue.await(SingleConsumerQueue.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.Grid.onWait(Grid.CDB:6)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"NameService:TcpAcceptor:TcpProcessor" #88 daemon prio=10 os_prio=0 tid=0x00007fb174079800 nid=0xd60 runnable [0x00007fb14adc0000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000b1c105f0> (a sun.nio.ch.Util$3)
+        - locked <0x00000000b1c10600> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000b1c105a8> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector.select(MultiplexedSocketProvider.java:512)
+        - locked <0x00000000b1c10610> (a java.util.HashSet)
+        - locked <0x00000000b1c10620> (a com.oracle.common.collections.UnmodifiableSetCollection)
+        - locked <0x00000000b1c10630> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.peer.acceptor.TcpAcceptor$TcpProcessor.onNotify(TcpAcceptor.CDB:13)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:54)
+        at java.lang.Thread.run(Thread.java:748)
+
+"NameService:TcpAcceptor" #87 daemon prio=10 os_prio=0 tid=0x000000000141e800 nid=0xd5f in Object.wait() [0x00007fb14aec1000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:97)
+        at com.oracle.common.base.Blocking.wait(Blocking.java:80)
+        at com.tangosol.coherence.component.util.Queue.await(Queue.CDB:9)
+        - locked <0x00000000b1c10890> (a com.tangosol.coherence.component.net.Cluster$NameService$TcpAcceptor$Queue)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" #86 daemon prio=5 os_prio=0 tid=0x00007fb158015800 nid=0xd5e in Object.wait() [0x00007fb14afc2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000b1c10a90> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"oracle.dfw.incident.FloodController" #80 daemon prio=5 os_prio=0 tid=0x00007fb16114f000 nid=0xd57 in Object.wait() [0x00007fb14b5c6000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.dfw.impl.incident.FloodController.run(FloodController.java:170)
+        - locked <0x00000000b1c10fb0> (a java.lang.Object)
+        at java.lang.Thread.run(Thread.java:748)
+
+"oracle.dfw.incident.IncidentCreatorThread" #79 daemon prio=5 os_prio=0 tid=0x00007fb160db9000 nid=0xd56 in Object.wait() [0x00007fb14b6c7000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at oracle.dfw.impl.incident.DiagnosticsDataExtractorImpl$IncidentCreatorThread.run(DiagnosticsDataExtractorImpl.java:2190)
+        - locked <0x00000000b1c11160> (a java.util.ArrayList)
+        at java.lang.Thread.run(Thread.java:748)
+
+"oracle.dfw.impl.incident.ADRHelper - purge incidents" #78 daemon prio=5 os_prio=0 tid=0x00007fb160db8000 nid=0xd54 in Object.wait() [0x00007fb14b8c9000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.util.TimerThread.mainLoop(Timer.java:552)
+        - locked <0x00000000b1c11318> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"oracle.dfw.impl.incident - ADR Executor (created: Thu Jan 11 06:33:00 CST 2018)" #74 daemon prio=5 os_prio=0 tid=0x00007fb160e76000 nid=0xd4f waiting on condition [0x00007fb14b7c8000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c114e8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"DFW Diagnostic Dump Sampling - DMSMetrics" #70 daemon prio=5 os_prio=0 tid=0x00007fb161112800 nid=0xd4a in Object.wait() [0x00007fb14bacb000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.dfw.sampling.DumpSampling.run(DumpSampling.java:554)
+        - locked <0x00000000b1c11830> (a [B)
+
+"DFW Diagnostic Dump Sampling - JavaClassHistogram" #69 daemon prio=5 os_prio=0 tid=0x00007fb161110800 nid=0xd49 in Object.wait() [0x00007fb14bbcc000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.dfw.sampling.DumpSampling.run(DumpSampling.java:554)
+        - locked <0x00000000b1c11a00> (a [B)
+
+"DFW Diagnostic Dump Sampling - JVMThreadDump" #68 daemon prio=5 os_prio=0 tid=0x00007fb161110000 nid=0xd48 in Object.wait() [0x00007fb14bccd000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.dfw.sampling.DumpSampling.run(DumpSampling.java:554)
+        - locked <0x00000000b1c11bd0> (a [B)
+
+"PacketListenerBU" #66 daemon prio=10 os_prio=0 tid=0x0000000001410800 nid=0xd46 runnable [0x00007fb14bdce000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+        - locked <0x00000000b1c21d88> (a java.net.PlainDatagramSocketImpl)
+        at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+        - locked <0x00000000b1c21d88> (a java.net.PlainDatagramSocketImpl)
+        at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+        - locked <0x00000000b1c21db8> (a java.net.DatagramPacket)
+        - locked <0x00000000b1c21de0> (a java.net.MulticastSocket)
+        at com.tangosol.coherence.component.net.socket.UdpSocket.receive(UdpSocket.CDB:18)
+        - locked <0x00000000b1c21db8> (a java.net.DatagramPacket)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.packetProcessor.PacketListener.onNotify(PacketListener.CDB:8)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:54)
+        at java.lang.Thread.run(Thread.java:748)
+
+"PacketListenerBT" #65 daemon prio=10 os_prio=0 tid=0x000000000140f000 nid=0xd45 runnable [0x00007fb14becf000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000b1c221b0> (a sun.nio.ch.Util$3)
+        - locked <0x00000000b1c221c0> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000b1c22168> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector.select(MultiplexedSocketProvider.java:512)
+        - locked <0x00000000b1c221d0> (a java.util.HashSet)
+        - locked <0x00000000b1c221e0> (a com.oracle.common.collections.UnmodifiableSetCollection)
+        - locked <0x00000000b1c221f0> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.tangosol.net.TcpDatagramSocket$Impl.nextKey(TcpDatagramSocket.java:560)
+        - locked <0x00000000b1c221f0> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.tangosol.net.TcpDatagramSocket$Impl.receive(TcpDatagramSocket.java:510)
+        at com.tangosol.net.TcpDatagramSocket.receive(TcpDatagramSocket.java:272)
+        at com.tangosol.coherence.component.net.socket.UdpSocket.receive(UdpSocket.CDB:18)
+        - locked <0x00000000b1c22330> (a java.net.DatagramPacket)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.packetProcessor.PacketListener.onNotify(PacketListener.CDB:8)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:54)
+        at java.lang.Thread.run(Thread.java:748)
+
+"ClickHistory Writer" #64 daemon prio=5 os_prio=0 tid=0x00007fb16108d800 nid=0xd44 in Object.wait() [0x00007fb14bfd0000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.core.ojdl.logging.ClickHistoryWriter.waitForARecord(ClickHistoryWriter.java:178)
+        - locked <0x00000000b1c22698> (a [B)
+        at oracle.core.ojdl.logging.ClickHistoryWriter.run(ClickHistoryWriter.java:110)
+
+"Cluster|Member(Id=1, Timestamp=2018-01-11 06:32:58.517, Address=10.0.2.15:33353, MachineId=37645, Location=process:3337,member:osb_server1, Role=WeblogicServer)" #62 daemon prio=10 os_prio=0 tid=0x00007fb1580e6800 nid=0xd42 runnable [0x00007fb14c3d2000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000b1c22a50> (a sun.nio.ch.Util$3)
+        - locked <0x00000000b1c22a60> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000b1c22a08> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector.select(MultiplexedSocketProvider.java:512)
+        - locked <0x00000000b1c22a70> (a java.util.HashSet)
+        - locked <0x00000000b1c22a80> (a com.oracle.common.collections.UnmodifiableSetCollection)
+        - locked <0x00000000b1c22a90> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.tangosol.coherence.component.net.TcpRing.select(TcpRing.CDB:22)
+        - locked <0x00000000b1c22a90> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.grid.ClusterService$TcpRing.await(ClusterService.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.service.Grid.onWait(Grid.CDB:6)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"IpMonitor" #61 daemon prio=6 os_prio=0 tid=0x00007fb1580e4800 nid=0xd41 waiting on condition [0x00007fb14c4d3000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c22ee8> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:157)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:58)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.IpMonitor.onWait(IpMonitor.CDB:4)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"PacketPublisher" #60 daemon prio=10 os_prio=0 tid=0x00007fb1580e3000 nid=0xd40 waiting on condition [0x00007fb14c5d4000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c23118> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:153)
+        at com.oracle.common.base.Blocking.park(Blocking.java:137)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:54)
+        at com.tangosol.coherence.component.util.queue.SingleConsumerQueue.await(SingleConsumerQueue.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.packetProcessor.PacketPublisher.onWait(PacketPublisher.CDB:2)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"PacketReceiver" #59 daemon prio=10 os_prio=0 tid=0x00007fb1580ea000 nid=0xd3f waiting on condition [0x00007fb14c6d5000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c23438> (a com.oracle.common.base.SingleWaiterMultiNotifier)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at com.oracle.common.base.Blocking.parkNanos(Blocking.java:153)
+        at com.oracle.common.base.Blocking.park(Blocking.java:137)
+        at com.oracle.common.base.SingleWaiterMultiNotifier.await(SingleWaiterMultiNotifier.java:54)
+        at com.tangosol.coherence.component.util.queue.SingleConsumerQueue.await(SingleConsumerQueue.CDB:1)
+        at com.tangosol.coherence.component.util.Daemon.onWait(Daemon.CDB:13)
+        at com.tangosol.coherence.component.util.daemon.QueueProcessor.onWait(QueueProcessor.CDB:3)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.packetProcessor.PacketReceiver.onWait(PacketReceiver.CDB:2)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:43)
+        at java.lang.Thread.run(Thread.java:748)
+
+"PacketListener1" #58 daemon prio=10 os_prio=0 tid=0x00007fb1580e8000 nid=0xd3e runnable [0x00007fb14c7d6000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+        - locked <0x00000000b1c33708> (a java.net.PlainDatagramSocketImpl)
+        at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+        - locked <0x00000000b1c33708> (a java.net.PlainDatagramSocketImpl)
+        at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+        - locked <0x00000000b1c33738> (a java.net.DatagramPacket)
+        - locked <0x00000000b1c33760> (a java.net.DatagramSocket)
+        at com.tangosol.coherence.component.net.socket.UdpSocket.receive(UdpSocket.CDB:18)
+        - locked <0x00000000b1c33738> (a java.net.DatagramPacket)
+        at com.tangosol.coherence.component.util.daemon.queueProcessor.packetProcessor.PacketListener.onNotify(PacketListener.CDB:8)
+        at com.tangosol.coherence.component.util.Daemon.run(Daemon.CDB:54)
+        at java.lang.Thread.run(Thread.java:748)
+
+"SelectionService(channels=13, selector=MultiplexedSelector(sun.nio.ch.EPollSelectorImpl@42e5e50), id=834488020)" #55 daemon prio=5 os_prio=0 tid=0x00007fb158123000 nid=0xd3c runnable [0x00007fb14d0d6000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000b1c33d78> (a sun.nio.ch.Util$3)
+        - locked <0x00000000b1c33d88> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000b1c33d30> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector.select(MultiplexedSocketProvider.java:512)
+        - locked <0x00000000b1c33d98> (a java.util.HashSet)
+        - locked <0x00000000b1c33da8> (a com.oracle.common.collections.UnmodifiableSetCollection)
+        - locked <0x00000000b1c33db8> (a com.oracle.common.internal.net.MultiplexedSocketProvider$MultiplexedSelector)
+        at com.oracle.common.base.Blocking.select(Blocking.java:282)
+        at com.oracle.common.internal.net.RunnableSelectionService.process(RunnableSelectionService.java:373)
+        at com.oracle.common.internal.net.RunnableSelectionService.run(RunnableSelectionService.java:274)
+        at com.oracle.common.internal.net.ResumableSelectionService.run(ResumableSelectionService.java:133)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Thread-27" #52 prio=5 os_prio=0 tid=0x00007fb1503d2000 nid=0xd39 waiting on condition [0x00007fb14f5fc000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000b1c33fd8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+        at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:841)
+        at weblogic.store.internal.PersistentStoreImpl.synchronousFlush(PersistentStoreImpl.java:1241)
+        at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:1233)
+        at java.lang.Thread.run(Thread.java:748)
+
+"DoSManager" #51 daemon prio=6 os_prio=0 tid=0x00007fb174049800 nid=0xd38 waiting on condition [0x00007fb14f4fb000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at com.octetstring.vde.DoSManager.run(DoSManager.java:433)
+
+"VDE Transaction Processor Thread" #48 daemon prio=2 os_prio=0 tid=0x00007fb17014e000 nid=0xd36 in Object.wait() [0x00007fb14f8fd000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:429)
+        - locked <0x00000000afe985e8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+        at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:216)
+
+"JPS FileChangeNotifier<clean-only>" #45 daemon prio=5 os_prio=0 tid=0x00007fb1604a8800 nid=0xd34 waiting on condition [0x00007fb14f9fe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000ac33e548> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" #42 daemon prio=9 os_prio=0 tid=0x00007fb158025800 nid=0xd32 in Object.wait() [0x00007fb1544ed000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000afe98ac8> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"InterruptTimer" #41 daemon prio=5 os_prio=0 tid=0x00007fb160415800 nid=0xd31 in Object.wait() [0x00007fb1551ee000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000aea5be48> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"oracle.jdbc.driver.BlockSource.ThreadedCachingBlockSource.BlockReleaser" #40 daemon prio=4 os_prio=0 tid=0x00007fb160622800 nid=0xd30 in Object.wait() [0x00007fb1552ef000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser.run(BlockSource.java:330)
+        - locked <0x00000000ae9770f0> (a oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser)
+
+"Timer-4" #39 daemon prio=5 os_prio=0 tid=0x00007fb160865800 nid=0xd2f in Object.wait() [0x00007fb1555f0000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000ae7c7470> (a java.util.TaskQueue)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000ae7c7470> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Abandoned connection cleanup thread" #38 daemon prio=5 os_prio=0 tid=0x00007fb160618000 nid=0xd2e in Object.wait() [0x00007fb155cf1000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000ae0d2e08> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+        - locked <0x00000000ae0d2e08> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+        at com.mysql.jdbc.NonRegisteringDriver$1.run(NonRegisteringDriver.java:93)
+
+"Timer-3" #37 daemon prio=5 os_prio=0 tid=0x00007fb1602e5000 nid=0xd2d in Object.wait() [0x00007fb1561f2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000adb292b8> (a java.util.TaskQueue)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000adb292b8> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Thread-19" #36 prio=5 os_prio=0 tid=0x00000000014c7800 nid=0xd2c waiting on condition [0x00007fb1562f3000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000adb6cf48> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+        at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+        at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:841)
+        at weblogic.store.internal.PersistentStoreImpl.synchronousFlush(PersistentStoreImpl.java:1241)
+        at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:1233)
+        at java.lang.Thread.run(Thread.java:748)
+
+"weblogic.socket.ServerListenThread" #33 daemon prio=5 os_prio=0 tid=0x00007fb16012b800 nid=0xd2b runnable [0x00007fb156bf8000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000ad3f7970> (a sun.nio.ch.Util$3)
+        - locked <0x00000000ad3f7960> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000ad3f7848> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+        at weblogic.server.channels.ServerListenThread.selectFrom(ServerListenThread.java:241)
+        at weblogic.server.channels.ServerListenThread.processSockets(ServerListenThread.java:137)
+        at weblogic.server.channels.ServerListenThread.run(ServerListenThread.java:114)
+
+"[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" #32 daemon prio=9 os_prio=0 tid=0x00007fb174041000 nid=0xd2a in Object.wait() [0x00007fb156ef9000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000ad3bd3c0> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" #31 daemon prio=5 os_prio=0 tid=0x00007fb1600de000 nid=0xd29 runnable [0x00007fb178b0a000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000ad2e2030> (a sun.nio.ch.Util$3)
+        - locked <0x00000000ad2e2020> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000ad2e1f08> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+        at weblogic.socket.NIOSocketMuxer.selectFrom(NIOSocketMuxer.java:653)
+        at weblogic.socket.NIOSocketMuxer.processSockets(NIOSocketMuxer.java:560)
+        at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:30)
+        at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:43)
+        at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:147)
+        at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:119)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" #30 daemon prio=5 os_prio=0 tid=0x00007fb1600dd800 nid=0xd28 runnable [0x00007fb178d0c000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+        at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:93)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+        - locked <0x00000000ad2e0a00> (a sun.nio.ch.Util$3)
+        - locked <0x00000000ad2e0988> (a java.util.Collections$UnmodifiableSet)
+        - locked <0x00000000ad2e0820> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+        at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+        at weblogic.socket.NIOSocketMuxer.selectFrom(NIOSocketMuxer.java:653)
+        at weblogic.socket.NIOSocketMuxer.processSockets(NIOSocketMuxer.java:560)
+        at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:30)
+        at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:43)
+        at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:147)
+        at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:119)
+
+"[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" #29 daemon prio=9 os_prio=0 tid=0x00007fb1600cb800 nid=0xd27 waiting on condition [0x00007fb178809000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000000c01cf510> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+        at java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:492)
+        at java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:680)
+        at sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:118)
+        at com.oracle.weblogic.lifecycle.core.LifecycleConfigFileWatcher$MyWatchQueueReader.run(LifecycleConfigFileWatcher.java:129)
+        at java.lang.Thread.run(Thread.java:748)
+        at weblogic.work.SelfTuningWorkManagerImpl$WorkAdapterImpl.run(SelfTuningWorkManagerImpl.java:670)
+        at weblogic.invocation.ComponentInvocationContextManager._runAs(ComponentInvocationContextManager.java:352)
+        at weblogic.invocation.ComponentInvocationContextManager.runAs(ComponentInvocationContextManager.java:337)
+        at weblogic.work.LivePartitionUtility.doRunWorkUnderContext(LivePartitionUtility.java:57)
+        at weblogic.work.PartitionUtility.runWorkUnderContext(PartitionUtility.java:41)
+        at weblogic.work.SelfTuningWorkManagerImpl.runWorkUnderContext(SelfTuningWorkManagerImpl.java:644)
+        at weblogic.work.ExecuteThread.execute(ExecuteThread.java:415)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:355)
+
+"[STANDBY] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" #28 daemon prio=9 os_prio=0 tid=0x00007fb1600cb000 nid=0xd26 in Object.wait() [0x00007fb178c0b000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000ad2b7390> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"weblogic.timers.TimerThread" #26 daemon prio=9 os_prio=0 tid=0x00007fb18f322800 nid=0xd24 in Object.wait() [0x00007fb1571fa000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at weblogic.timers.internal.TimerThread.doWait(TimerThread.java:115)
+        - locked <0x00000000acf29a38> (a java.lang.Object)
+        at weblogic.timers.internal.TimerThread.access$000(TimerThread.java:21)
+        at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:291)
+
+"weblogic.time.TimeEventGenerator" #25 daemon prio=9 os_prio=0 tid=0x00007fb18f314800 nid=0xd23 in Object.wait() [0x00007fb1572fb000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+        - locked <0x00000000acf1b4b0> (a weblogic.time.common.internal.TimeTable)
+        at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:121)
+        at java.lang.Thread.run(Thread.java:748)
+
+"[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" #24 daemon prio=9 os_prio=0 tid=0x00007fb18f305800 nid=0xd22 in Object.wait() [0x00007fb1575fc000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000aced4590> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"[STANDBY] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" #23 daemon prio=9 os_prio=0 tid=0x00007fb18f303800 nid=0xd21 in Object.wait() [0x00007fb1576fd000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:323)
+        - locked <0x00000000aced1868> (a weblogic.work.ExecuteThread)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:383)
+
+"Timer-2" #22 daemon prio=5 os_prio=0 tid=0x00007fb18f2fc000 nid=0xd20 in Object.wait() [0x00007fb1577fe000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.util.TimerThread.mainLoop(Timer.java:552)
+        - locked <0x00000000ace9df38> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Timer-1" #21 daemon prio=5 os_prio=0 tid=0x00007fb18ed40000 nid=0xd1f in Object.wait() [0x00007fb1786fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000aae262a8> (a java.util.TaskQueue)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000aae262a8> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Timer-0" #12 daemon prio=5 os_prio=0 tid=0x00007fb18ed31800 nid=0xd16 in Object.wait() [0x00007fb179932000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000000aad41ea0> (a java.util.TaskQueue)
+        at java.lang.Object.wait(Object.java:502)
+        at java.util.TimerThread.mainLoop(Timer.java:526)
+        - locked <0x00000000aad41ea0> (a java.util.TaskQueue)
+        at java.util.TimerThread.run(Timer.java:505)
+
+"Service Thread" #9 daemon prio=9 os_prio=0 tid=0x00007fb18eac5000 nid=0xd12 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread1" #8 daemon prio=9 os_prio=0 tid=0x00007fb18eac1800 nid=0xd11 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=0 tid=0x00007fb18eabf000 nid=0xd10 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 tid=0x00007fb18ea7d000 nid=0xd0e runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=0 tid=0x00007fb18c0a4800 nid=0xd0d in Object.wait() [0x00007fb17b968000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+        - locked <0x00000000ab17ce60> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 tid=0x00007fb18c0a0000 nid=0xd0c in Object.wait() [0x00007fb17ba69000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        - locked <0x00000000ab17d018> (a java.lang.ref.Reference$Lock)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=0 tid=0x00007fb18c00c800 nid=0xd0a in Object.wait() [0x00007fb192aff000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1065)
+        - locked <0x00000000aaca5260> (a weblogic.t3.srvr.T3Srvr)
+        at weblogic.t3.srvr.T3ServerFuture.get(T3ServerFuture.java:79)
+        at weblogic.t3.srvr.T3ServerFuture.get(T3ServerFuture.java:61)
+        at weblogic.t3.srvr.T3ServerFuture.get(T3ServerFuture.java:15)
+        at weblogic.Server.main(Server.java:140)
+
+"VM Thread" os_prio=0 tid=0x00007fb18c098000 nid=0xd0b runnable 
+
+"VM Periodic Task Thread" os_prio=0 tid=0x00007fb18eaca000 nid=0xd14 waiting on condition 
