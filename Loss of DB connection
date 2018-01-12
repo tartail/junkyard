@@ -1,3 +1,5 @@
+ENV: vbox5.2+ol6.9+jdk8+wls12213+osb12213
+SYM: db server run on another vm, not restartd, osb_server1.log as follows:
 
 [weblogic@localhost logs]$ cat osb_server1.log
 ####<Jan 11, 2018 10:39:55,272 PM CST> <Info> <Common> <localhost.localdomain> <osb_server1> <[ACTIVE] ExecuteThread: '27' for queue: 'weblogic.kernel.Default (self-tuning)'> <<anonymous>> <> <337c1610-dc11-4507-b3ed-029b9d800af3-00000139> <1515681595272> <[severity-value: 64] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000633> <Resource Pool "mds-owsm" suspending due to consecutive number of resource creation failures exceeding threshold of 2> 
